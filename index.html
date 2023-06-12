@@ -1,0 +1,356 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贵州</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration:none;
+            list-style:none;
+        }
+        .main{
+            width:1464px;
+            margin:auto;/*水平居中*/
+            width:100%;
+        }
+        .header,.nav,.container,.footer{
+            float:left;
+            width:100%;
+            box-sizing:border-box;
+        }
+        .header{
+            /*padding:20px;/*内边距*/
+            /*background-color: aqua;*/
+            text-align:center;
+            height:400x;
+            font-weight:bold;/*字体加粗*/
+            width:100%;
+        }
+        .nav {
+            background-color:cadetblue ;
+            line-height: 40px;
+            width: 100%;
+            box-shadow: 0px 1px #666;
+        }
+
+        .nav .nav-box {
+            width: 1000px;
+            height: 60px;
+            background-color: cadetblue;
+            /*背景颜色*/
+            margin:0.9px auto;
+            /*外边距*/
+        }
+
+        .nav .nav-box ul {
+            /*border:2px solid #000;*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display:flex;
+           
+            
+        }
+
+        .nav .nav-box ul li {
+            /*width:100px;*/
+            height: 60px;
+            float: left;
+            position: relative;
+            font-weight: bold;
+            /*字体加粗*/
+            display:flex;
+           
+        }
+
+        .nav .nav-box ul li a {
+            height: 60px;
+            padding: 0px 40px;
+            line-height: 60px;
+            color: #fdf8f8;
+            display: inline-block;
+            /* float:left; */
+            display:flex;
+           
+        }
+
+        .nav.nav-box ul li:hover {
+            background-color: #5c91ee;
+        }
+
+        .nav .nav-box ul li .subnav {
+            opacity: 0;
+            width: 100%;
+            background-color: #6a7176;
+            position: absolute;
+            left: 0px;
+            top: 60px;
+        }
+
+        .nav .nav-box ul li:hover .subnav {
+            opacity: 1;
+            color: #5c91ee;
+        }
+        .nav .nav-box ul li .subnav a:hover {
+            color: #5c91ee;
+             
+            
+        }
+
+        .nav.nav-box ul li:hover div {
+            display: none;
+            font-size: 15px;
+        }
+        .nav .nav-box ul li div a {
+            padding:0;
+            text-align:left;
+            /*水平对齐方式*/
+            font-size:14px;
+            display: inline;
+            margin-left:40px;
+            width:100%;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .nav a {
+            color: rgb(254, 254, 254);
+            display: inline-block;
+        }
+        .nav a:hover {
+            background: #083456;
+        }
+        .container{
+            height:1000px;
+        }
+        .lside{
+            width:222px;
+            float:left;
+            /* background-color: blanchedalmond; */
+            margin-left: 0px;
+        }
+        .content{
+            /*margin:0px 250px;*/
+            text-align: center;
+            /* background-color: lightcoral; */
+            width:1242px;
+            width:100%;
+        }
+        .lside,.content{
+            padding:5px;
+            height:500px;
+            box-sizing:border-box;/*去掉内边距*/
+        }
+        .content1{
+            width: 1464px;
+            height: 500px;
+            /* background-color: cadetblue; */
+            width:100%;
+
+        }
+        .footer{
+            padding:10px;
+            background:#7d6c6c;
+            text-align:center;
+            width:100%;
+        }
+        @media screen and (max-width:700px){
+            .lside,.content{
+                width:100%;
+                margin:0px;
+            }
+        }
+        .box1{
+            height:300px;
+            width:1300px;
+            background:#dedee1;
+            margin :70px;
+            float:left;
+        }
+        .box3{
+            height:330px;
+            width:600px;
+            /* background-color: aquamarine; */
+            margin-right:80px;
+            float:right;
+        }
+       
+        .box4{
+            height:400px;
+            width:450px;
+            background:#7d6c6c;
+            margin-top: 10px;
+            margin-left: 30px;
+            float:left;
+            border-color:#010101;
+            border-style: solid;
+            border-width: 5px;
+
+        }
+        .box5{
+            height:400px;
+            width:450px;
+            background:#7d6c6c;
+            margin-top: 10px;
+            margin-right:0px;
+            margin-left:15px;
+            float:left;
+            border-color:#010101;
+            border-style: solid;
+            border-width: 5px;
+            
+        }
+        .box6{
+            height:400px;
+            width:450px;
+            background-color: #7d6c6c;
+            margin-top: 10px;
+            margin-left:15px;
+            margin-right:5px;
+            float:left;
+            text-align:center;
+            border-color:#010101;
+            border-style: solid;
+            border-width: 5px;
+        }
+        .box7{
+            height:80px;
+            width:800px;
+            /* background-color: burlywood; */
+            margin-top:420px;
+            font-size: 28px;
+            font-family: ;
+            font-style:italic;
+            text-shadow:0 0 15px #000;
+            line-height:100px;
+            text-indent:-6em;
+
+        }
+       h3{
+            font-size: 30px;
+            font-family: STXingkai;
+            line-height: 43px;
+            text-indent:2em;
+            color:rgb(32, 47, 47)
+        }
+        p{
+            font-size: 25px;
+            font-family:STXingkai;
+            line-height: 41px;
+            text-indent:6.5em;
+            color:rgb(32, 47, 47)
+
+        }
+        h6{
+            font-size:19px;
+            color:#000;
+            font-family:STKaiti;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <img src="images/10.png" alt="这是网页的头部"
+                  style="display:block; width:100%;height:100%"></img>
+        </div>
+        <div class="nav">
+            <div class="nav-box">
+                <ul class="clearfix">
+                    <li>
+                        <a href="shouye.html">首页</a>
+                        <!-- <div class="subnav">
+                            <a href="#">下拉1</a>
+                            <a href="#">下拉1</a>
+                            <a href="#">下拉1</a>
+                        </div> -->
+                    </li>
+                    <li><a href="jieshao.html">贵州介绍</a>
+                        <!-- <div class="subnav">
+                            <a href="#">下拉2</a>
+                        </div> -->
+                    </li>
+                    <li><a href="meijing.html">贵州美景</a>
+                        <div class="subnav">
+                            <a href="lvyoushengdi.html">旅游胜地</a>
+                        </div>
+                    </li>
+                    <li><a href="meishi.html">贵州美食</a>
+                        <div class="subnav">
+                            <a href="tesexiaochi.html">特色小吃</a>
+                        </div>
+                    </li>
+                    <li><a href="fengsu.html">贵州风俗</a>
+                    </li>
+                    <li><a href="lianxiwomen.html">联系我们</a>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <!--主体中放入三个大盒子*/-->
+            <div class="lside">
+                <!-- <h2>我是左边</h2> -->
+                <div  class="box1">
+                    <h3>梦里想见的人是你，梦里想去的地方是贵州！</h3>
+                    <p>你我要期盼，要绚烂,要璀璨</p>
+                    <p>要踏遍塞外川，要走过江南岸</p>
+                    <p>要在山顶上读一首不朽的诗篇</p>
+                    <p>要心怀热爱，看此间美好万千</p>
+                    <p>当你看向我，跟人谈论我，</p>
+                    <p>反复回忆起我时，我就在你身边。</p>
+                </div>
+                <!-- <p>
+                   我是左边的内容  
+                </p> -->
+            </div>
+            <div class="content">
+                <div  class="box3">
+                    <video width="700px" height="405px" controls autoplay>
+                            <source src="images/video11.mp4" autoplay controls >                      
+                    </video> 
+                </div>
+                <div class="box7">
+                    <h4>傍晚市井长巷，聚拢来是烟火，摊开来是人间——镇远古城</h4>
+                </div>
+                <!-- <p>
+                    我是中间内容
+                </p> -->
+            </div>
+            <div class="content1">
+                <!-- <h2>我是中下部</h2> -->
+                <div class="box4">
+                    <img src="images/夜景1.jpg" alt="夜景1"
+                  style="display:block; width:100%;height:100%"></img>
+                </div>
+                <div class="box5">
+                    <img src="images/夜景4.jpg" alt="夜景4"
+                    style="display:block; width:100%;height:100%"></img>
+                </div>
+                <div class="box6">
+                    <img src="images/夜景3.jpg" alt="夜景3"
+                    style=" width:100%;height:100%"></img>  
+                </div>
+            </div>
+        </div>     
+        <div class="footer">
+            <h6>
+                <a href="">网站地图</a>
+            |
+                <a href="">诚聘英才</a>
+            |
+                <a href="">商务合作</a>
+            </h6>
+            <h6>Copyright 2023</h6>
+            <h6>地址：贵州省</h6>
+        </div> 
+    </div>
+</body>
+</html>
